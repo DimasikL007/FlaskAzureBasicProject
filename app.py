@@ -1,12 +1,28 @@
-from flask import Flask
+from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 
-if __name__ == '__main__':
+@app.route("/compare")
+def compare():
+    return render_template("compare.html")
+
+
+@app.route("/health")
+def health():
+    return jsonify(status="ok")
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    # Зберігаємо правильний HTTP-код помилки.
+    return render_template("404.html"), 404
+
+
+if __name__ == "__main__":
     app.run()

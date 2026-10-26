@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Сторінку не знайдено{% endblock %}
+{% block content %}
+<section class="intro">
+    <p class="eyebrow">Помилка 404</p>
+    <h1>Сторінку не знайдено</h1>
+    <p>Перевірте адресу або поверніться на головну сторінку.</p>
+    <a class="button" href="{{ url_for('index') }}">На головну</a>
+</section>
+{% endblock %}

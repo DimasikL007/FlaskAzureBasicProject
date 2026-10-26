@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Хмарні технології — IaaS, PaaS та SaaS{% endblock %}
+{% block content %}
+<section class="intro intro-home">
+    <h1 class="overview-text">Хмарні сервіси надають обчислювальні ресурси, платформи та готові програми через інтернет. Модель послуги визначає, чим керує користувач і що обслуговує постачальник.</h1>
+</section>
+<section aria-label="IaaS, PaaS, SaaS">
+    <div class="section-heading"><span class="section-caption">Від інфраструктури до готового застосунку</span></div>
+    <div class="model-grid">
+        <article class="model-card">
+            <div class="card-heading"><span class="icon-circle">{{ icon('server') }}</span><span class="model-number">01 / Інфраструктура</span></div>
+            <h2>IaaS</h2>
+            <p class="english-name" lang="en">Infrastructure as a Service</p>
+            <p class="ukrainian-name">Інфраструктура як послуга</p>
+            <p>Обчислювальні ресурси на вимогу: віртуальні машини, сховища та мережі для власних систем.</p>
+            <dl class="responsibilities">
+                <dt>Постачальник</dt><dd>Обслуговує фізичне обладнання та рівень віртуалізації.</dd>
+                <dt>Користувач</dt><dd>Установлює й обслуговує операційну систему, середовище виконання та застосунки. Керує даними й налаштуваннями доступу.</dd>
+            </dl>
+            <ul class="model-details">
+                <li>Значний контроль над середовищем, але потрібні навички адміністрування.</li>
+                <li>Для власних серверів, нестандартних конфігурацій і перенесення наявних систем у хмару.</li>
+            </ul>
+            <div class="examples"><span>Приклади сервісів</span><p>Azure Virtual Machines · Amazon EC2</p></div>
+        </article>
+        <article class="model-card featured">
+            <div class="card-heading"><span class="icon-circle">{{ icon('layers') }}</span><span class="model-number">02 / Платформа</span></div>
+            <h2>PaaS</h2>
+            <p class="english-name" lang="en">Platform as a Service</p>
+            <p class="ukrainian-name">Платформа як послуга</p>
+            <p>Готове середовище для розроблення, запуску та розгортання власних застосунків.</p>
+            <dl class="responsibilities">
+                <dt>Постачальник</dt><dd>Обслуговує інфраструктуру, віртуалізацію, операційну систему та підтримуване середовище виконання.</dd>
+                <dt>Користувач</dt><dd>Керує кодом, залежностями, даними та налаштуваннями застосунку.</dd>
+            </dl>
+            <ul class="model-details">
+                <li>Простіше розгортання та менше адміністрування. Доступ до базового середовища обмежений можливостями платформи.</li>
+                <li>Для вебзастосунків, API та команд, які зосереджуються на розробленні.</li>
+            </ul>
+            <div class="examples"><span>Приклади сервісів</span><p>Azure App Service · Google App Engine</p></div>
+        </article>
+        <article class="model-card">
+            <div class="card-heading"><span class="icon-circle">{{ icon('app') }}</span><span class="model-number">03 / Програма</span></div>
+            <h2>SaaS</h2>
+            <p class="english-name" lang="en">Software as a Service</p>
+            <p class="ukrainian-name">Програмне забезпечення як послуга</p>
+            <p>Готовий застосунок, доступний через інтернет у браузері або клієнтській програмі.</p>
+            <dl class="responsibilities">
+                <dt>Постачальник</dt><dd>Обслуговує інфраструктуру, середовище виконання та сам застосунок, забезпечує його оновлення.</dd>
+                <dt>Користувач</dt><dd>Працює з функціями сервісу. Керує власними даними, обліковими записами, доступами та доступними налаштуваннями.</dd>
+            </dl>
+            <ul class="model-details">
+                <li>Початок роботи без розгортання власного застосунку. Налаштування залежать від функцій сервісу.</li>
+                <li>Для роботи з документами, комунікації, спільної роботи та готових бізнес-завдань.</li>
+            </ul>
+            <div class="examples"><span>Приклади сервісів</span><p>Microsoft 365 · Google Docs</p></div>
+        </article>
+    </div>
+</section>
+{% endblock %}
